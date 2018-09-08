@@ -1,8 +1,6 @@
-// CS3241Lab1.cpp : Defines the entry point for the console application.
 #include <cmath>
 #include <iostream>
 
-/* Include header files depending on platform */
 #ifdef _WIN32
 	#include "glut.h"
 	#define M_PI 3.14159
@@ -78,7 +76,7 @@ void drawComplexSpirograph(float R, float rho)
     y1 = (R - r)*sin(t) + rho*sin(((R - r) / r)*t);
     
     for (int i = 0; i < 1000; i++) {
-        t = i*speed;
+        t = i*speed; //angle of rotation
         
         //Using spirograph equation from wikipedia
         x = (R - r)*cos(t) + rho*cos(((R - r) / r)*t);
@@ -200,7 +198,6 @@ void keyboard (unsigned char key, int x, int y)
 
 int main(int argc, char **argv)
 {
-	cout<<"CS3241 Lab 1\n\n";
 	cout<<"+++++CONTROL BUTTONS+++++++\n\n";
 	cout<<"Scale Up/Down: Q/E\n";
 	cout<<"Rotate Clockwise/Counter-clockwise: A/D\n";
